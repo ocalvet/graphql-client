@@ -4,10 +4,11 @@ import { graphql } from 'react-apollo';
 
 class App extends Component {
   render() {
-    console.log(this.props);
+    const user = this.props.data.user ? this.props.data.user.name : '';
     return (
       <div>
         <h1>GraphQL Testing Library</h1>
+        <h3>Welcome {user}</h3>
       </div>
     );
   }
